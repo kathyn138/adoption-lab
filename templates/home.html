@@ -5,6 +5,7 @@
 <h1>Pets</h1>
 
 {% for pet in pets %}
+<div>
 <img src="{{ pet.photo_url }}">
 <bold><br> {{ pet.name }} 
 
@@ -14,10 +15,11 @@
     is not available! 
 {% endif %}
 </bold>
-
+</div>
 {% endfor %}
 
-<form action="/add-pet">
+
+<form action="/add">
     <button type="submit">Add a Pet</button>
 </form>
 {% endblock %}
